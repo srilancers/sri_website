@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --text-color-first:#000;
+    --text-color-second:#444;
+    --text-color-third:#666;
+
+    --color-primary:#BFE9D0;
+    --color-secondary:#205D4D;
+
+    --font-secondary:'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+p,li{
+  color: var(--text-color-third);
+}
+h1{
+
+}
+
+h2{
+  color: var(--text-color-second);
+  font-family: var(--font-secondary);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+h3{
+  color: var(--text-color-second);
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.section--padding{
+  padding-block: 10rem;
+}
+
+.btn--primary{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--color-primary);
+    color: var(--text-color-first);
+    
+}
+
+.btn--secondary{
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid var(--color-primary);
+    color: var(--text-color-first);
+}
+
+.btn--white{
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: var(--text-color-first);
+  
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+/* navbar starts here */
+.navbar {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+
+  .nav--items a { 
+    display: inline-block;
+    color: var(--text-color-first);
+    margin-left: 2rem;
+    font-size: 17px;
+  }
+  
+ 
+
+  /* hero starts here */
+
+  .hero{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #f0f0f0;
+    
+  }
+  .hero--content--cover{
+    text-align: center;
+  }
+
+  .hero--content--cover .btn--primary{
+    margin-top: 2rem;
+  }
+  .hero--text{
+    font-family: var(--font-secondary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-second);
+  }
+  .hero--desc{
+    font-size: 1.5rem;
+    max-width: 1000px;
+  }
+
+  /* service--types starts here */
+
+  .service--types{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+  }
+
+  .service--type{
+    border: 1px solid #BFE9D0;
+    padding: 2rem;
+  }
+
+  .service--type h2{
+    font-family: var(--font-secondary);
+    color: var(--text-color-second);
+  }
+
+  .service--type .btn--secondary{
+    margin-top: 1rem;
+  }
+
+  /* about starts here */
+
+.about--section{
+  position: relative;
+  background: url(../images/aboutbg.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
+.about{
+  padding-block: 10rem;
+  background-color: rgba(191, 233, 208,.8);
+ 
+}
+.about--content{
+ text-align: center; 
+}
+
+
+
+.about--content p{
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-color-second);
+}
+
+/* lg service starts */
+
+.service--navs{
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  z-index: 10;
+}
+
+.service--nav{
+  width: 200px;
+  padding:.5rem;
+ text-align: center;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+ cursor: pointer;
+}
+.service--nav.active{
+  background-color: var(--color-primary);
+}
+.service--nav.active .snav--content{
+  border: 1px solid #fff;
+}
+
+
+.snav--content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+border: 1px solid var(--color-primary);
+height: 120px;
+}
+
+.lg--service--container{
+  margin-top: -2rem;
+}
+.top--border{
+  height: 4rem;
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.lg--service--content--cover{
+  height: 25rem;
+  background-color: #f1f1f1;
+}
+.lg--deep--cleaning{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/aboutbg.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+
+.lg--deep--cleaning.active{
+  display: block;
+}
+
+.lg--scheduled--visits{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/sample2.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--scheduled--visits.active{
+  display: block;
+}
+.lg--one--time{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/aboutbg.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--one--time.active{
+  display: block;
+}
+.lg--moving{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/sample1.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--moving.active{
+  display: block;
+}
+
+.lg--service--content{
+  position: absolute;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, .15);
+  width:80%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+ padding: 1rem;
+}
+.lg--service--content h3 , .lg--service--content p{
+  color: #fff;
+}
+
+/* lg--living--section */
+
+.lg--living--section{
+  background-color: #fafafa;
+}
+
+.lg--bathing{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/sample1.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--bathing.active{
+  display: block;
+}
+.lg--disabilities{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/aboutbg.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--disabilities.active{
+  display: block;
+}
+.lg--medical{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/sample2.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--medical.active{
+  display: block;
+}
+.lg--errands{
+  display: none;
+  height: 100%;
+  width: 100%;
+background: url(../images/aboutbg.jpg);
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+position: relative;
+}
+.lg--errands.active{
+  display: block;
+}
+
+
+
+/* services starts */
+.service--cards{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+}
+
+.service--card{
+border: 1px solid #BFE9D0;
+}
+
+.service--card--content{
+  padding: 1rem;
+}
+
+.service--card--content ul{
+  margin-left: 1rem;
+}
+.service--img--cover{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service--img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.living--support{
+  background-color: #fafafa;
+}
+
+  /* certifications starts here */
+  .certifications--section .heading{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+.certifications{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.certification{
+  
+  border: 1px solid var(--color-primary);
+  padding: 2rem;
+}
+
+.certification img{
+  height: 100px;
+}
+.certification h3{
+  font-size: 1.4rem;
+  font-family: var(--font-secondary);
+}
+
+.short--desc{
+  color: rgb(180, 180, 180);
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+/* footer starts here */
+.footer--section{
+  background-color: var(--color-primary);
+  padding-block: 2rem;
+}
+.footer{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+.links{
+  display: flex;
+  flex-direction: column;
+}
+.subscription form{
+  margin-top: 1rem;
+}
+.subscription input{
+  display: block;
+  border: none;
+  outline: none;
+  margin-bottom: .5rem;
+  padding: .8rem 2rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.subscription .button{
+  display: inline-block;
+  padding: .8rem 2rem;
+  background: #fff;
+  color: var(--text-color-first);
+  
+}
+
+/* footer bottom starts here */
+
+.footer--bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.cleaning--services, .living--support{
+  display: none;
+}
