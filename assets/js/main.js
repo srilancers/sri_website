@@ -11,6 +11,19 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
+// mobile nav
+const menu = document.getElementById('menu');
+const close = document.getElementById('close');
+const navItems = document.getElementById('nav--items');
+
+menu.addEventListener("click", ()=>{
+  navItems.classList.add("active");
+})
+
+close.addEventListener("click", ()=>{
+  navItems.classList.remove("active");
+})
+
 // lg service
 const deepBtn = document.getElementById('deep--btn');
 const scheduledBtn = document.getElementById('scheduled--btn');
