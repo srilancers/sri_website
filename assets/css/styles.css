@@ -558,6 +558,12 @@ gap: 2rem;
   display: flex;
   flex-direction: column;
 }
+.links a{
+  color: var(--text-color-second);
+}
+.links a:hover{
+  color: var(--color-secondary);
+}
 .subscription form{
   margin-top: 1rem;
 }
