@@ -795,7 +795,12 @@ gap: 2rem;
   }
 .snav--content{
   height: 100%;
+  border: none;
 }
+.service--nav.active .snav--content {
+  border: none;
+}
+
   .snav--content img{
     display: none;
   }
